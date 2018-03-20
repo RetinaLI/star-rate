@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     .star_bg{
+         width: 120px;
+         height: 20px;
+         background: url(star.png) repeat-x;
+         position: relative;
+         overflow: hidden;
+     }
+     .star{
+         height: 100%;
+         width: 24px;
+         position: absolute;
+         /* line-height: 6em; */
+         z-index: 3;
+     }
+     .star_1{
+         left: 0;
+     }
+     .star_2{
+         left: 24px;
+     }
+     .star_3{
+         left: 48px;
+     }
+     .star_4{
+         left: 72px;
+     }
+     .star_5{
+         left: 96px;
+     }
+     .star:hover{
+         background: url(star.png) repeat-x 0 -20px;
+         left:0;
+         z-index: 2;
+     }
+     .star_1:hover{
+         width: 24px;
+     }
+     .star_2:hover{
+         width: 48px;
+     }
+     .star_3:hover{
+         width: 72px;
+     }
+     .star_4:hover{
+         width: 96px;
+     }
+     .star_5:hover{
+         width: 120px;
+     }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="star_bg">
+        <a class="star star_1"></a>
+        <a class="star star_2"></a>
+        <a class="star star_3"></a>
+        <a class="star star_4"></a>
+        <a class="star star_5"></a>
+
+    </div>
+</body>
+</html>

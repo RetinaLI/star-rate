@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+  <style>
+    .box {
+      height: 200px;
+      width: 600px;
+      margin: 0 auto;
+      border: 5px solid yellowgreen;
+      color: #ddd;
+      font-size: 0;
+    }
+
+    .star-wrap {
+      position: relative;
+      margin: 3px;
+      display: inline-block;
+    }
+
+    .fa-star {
+      font-size: 30px;
+    }
+
+    .star:before {
+      content: '/f005'
+    }
+
+    .bottom {
+      color: #ccc;
+      z-index: 0;
+    }
+
+    .top {
+      color: aquamarine;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .full{
+      width:100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <span>星星评分：</span>
+    <span class="star-wrap">
+      <span class="fa fa-star bottom"></span>
+      <span class="fa fa-star  top"></span>
+    </span>
+    <span class="star-wrap">
+      <span class="fa fa-star bottom"></span>
+      <span class="fa fa-star  top"></span>
+    </span>
+    <span class="star-wrap">
+      <span class="fa fa-star bottom"></span>
+      <span class="fa fa-star  top"></span>
+    </span>
+    <span class="star-wrap">
+      <span class="fa fa-star bottom"></span>
+      <span class="fa fa-star  top"></span>
+    </span>
+    <span class="star-wrap">
+      <span class="fa fa-star bottom"></span>
+      <span class="fa fa-star  top"></span>
+    </span>
+  </div>
+
+
+  <script>
+    var intPart = Math.floor(50/20);
+    var floatPart = Number((50%20).toFixed(0));
+    console.log(intPart, floatPart)
+
+    var topArr = document.querySelectorAll(".top");
+    console.log(topArr)
+    var ary = ["0%","0%","0%","0%","0%",]
+    for(var k = 0; k<ary.length; k++){
+      if(k == intPart){
+        ary[k] = floatPart/20*100 + "%";
+      }else if( k < intPart){
+        ary[k]= 100 + "%";
+      }else{
+        ary[k] = 0 + "%";
+      }
+      topArr[k].style.width = ary[k];
+    }
+    console.log(ary)
+
+
+
+  </script>
+</body>
+
+</html>

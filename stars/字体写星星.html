@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+  <style>
+   .cleanfloat::after{display: block; clear: both; content:""; visibility: hidden; height: 0;}
+        *{margin:0; padding:0;}
+
+        .starFive span {display: block;float: left;font-size: 25px; font-family: 'FontAwesome';
+            text-align: center;color: #888;width: 27px;height: 33px;line-height: 33px;
+            margin-right: 5px;position: relative;overflow: hidden;white-space: pre;
+         }
+        .starFive span:before {position: absolute;
+            left: 0;top: 0;display: block;width: 50%;
+            content: attr(data-content);overflow: hidden;color: #F63;
+        }
+        .sF1 span:before{width: 70%;}
+        .sF2 span:before{width: 50%;}
+        .sF3 span:before{width: 40%;}
+        .starFive .fa .fa-star {color: #F63;}
+        .starFive b {font-weight: normal; line-height: 40px;
+            font-size: 25px;color: #888;margin-left: 10px;
+        }
+        .fa{
+          color:red;
+          font-size:23px;
+        }
+  </style>
+</head>
+<body>
+<p class="fa fa-star">aaa </p>
+
+<div>
+  <p class='cleanfloat starFive sF1'>
+    <span class='fa fa-star'>R</span>
+    <span class='fa fa-star'>R</span>
+    <span class='fa fa-star'>R</span>
+    <span class='fa fa-star'>R</span>
+    <span data-content='R'>R</span>
+  </p>
+  <p class='cleanfloat starFive sF2'>
+    <span class='fa fa-star'>R</span>
+    <span class='fa fa-star'>R</span>
+    <span class='fa fa-star'>R</span>
+    <span data-content='R'>R</span>
+    <span>R</span>
+
+  </p>
+  <p class='cleanfloat starFive sF3'><span class='fa fa-star'>R</span><span class='fa fa-star'>R</span><span data-content='R'>R</span><span>R</span><span>R</span><b>2.4分</b></p>
+</div>
+
+
+</body>
+</html>
